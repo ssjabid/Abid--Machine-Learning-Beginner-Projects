@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from pandas.tools.plotting import scatter_matrix
+from pandas import scatter_matrix
 from matplotlib import cm
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
@@ -16,7 +16,7 @@ import pylab as pl
 
 # GET THE DATA
 
-fruits = pd.read_table('fruit_data_with_colors.txt')
+fruits = pd.read_table(r'H:\Abid - Documents\Documents\Abid - Learning\Abid - Git\Abid--Machine-Learning-Beginner-Projects\Fruit Test\fruit_data_with_colors.txt')
 fruits.head()
 
 print(fruits.head())
@@ -41,7 +41,7 @@ fruits.drop('fruit_label', axis=1).plot(kind='box', subplots=True, layout=(2,2),
             figsize=(9, 9), title = 'Box Plot for each numerical variable')
 
 plt.savefig('fruits_box')
-plt.show();
+plt.show()
 
 #it looks like color has a gaussian distribution why?
 #lets make some histograms to address each of these box plots further
